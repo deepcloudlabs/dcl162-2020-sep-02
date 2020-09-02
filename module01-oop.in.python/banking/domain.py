@@ -4,6 +4,51 @@ class InsufficientBalance(Exception):
         self.deficit = deficit
 
 
+class Customer:
+    def __init__(self, identity, fullname, email):
+        self.identity = identity
+        self.fullname = fullname
+        self.email = email
+        self.accounts = {}
+
+    def add_account(self, iban, balance):
+        if iban in self.accounts:
+            raise ValueError("Iban already exists.")
+        acc = Account(iban, balance)
+        self.accounts[iban] = acc
+        return acc
+
+    def add_account(self, account):
+        if account.get_iban() in self.accounts:
+            raise ValueError("Iban already exists.")
+        self.accounts[account.get_iban()] = account
+
+    def get_account(self, iban):
+        return self.accounts[iban]
+
+    def remove_account(self, iban):
+        acc = None
+        if iban in self.accounts:
+            acc = self.accounts[iban]
+            del self.accounts[iban]
+        return acc
+
+    def get_num_accounts(self):
+        len(self.accounts)
+
+    def get_all_accounts(self):
+        return self.accounts.values()
+
+    def get_all_ibans(self):
+        return self.accounts.keys()
+
+    def __str__(self):
+        pass
+
+    def __repr__(self):
+        return repr(self.identity)
+
+
 class Account:  # super/base class
     def __init__(self, iban, balance):  # constructor
         self.__iban = iban  # attribute information hiding!
@@ -34,7 +79,7 @@ class Account:  # super/base class
         return repr(self.__iban)
 
 
-class CheckingAccount(Account): # sub/derived class
+class CheckingAccount(Account):  # sub/derived class
     def __init__(self, iban, balance, overdraft_amount=500):
         super().__init__(iban, balance)
         self.overdraft_amount = overdraft_amount
