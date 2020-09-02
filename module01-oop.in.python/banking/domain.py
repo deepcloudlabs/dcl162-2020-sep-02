@@ -51,32 +51,38 @@ class Customer:
 
 class Account:  # super/base class
     def __init__(self, iban, balance):  # constructor
-        self.__iban = iban  # attribute information hiding!
-        self.balance = balance  # balance should be positive!
+        self._iban = iban  # attribute information hiding!
+        self._balance = balance  # balance should be positive!
         self.status = None
+
+    @property
+    def iban(self):
+        return self._iban
+
+    @property
+    def balance(self):
+        return self._balance
 
     def withdraw(self, amount):
         print("Account::withdraw")
         if amount <= 0:  # validation
             raise ValueError("amount must be positive.")
-        if amount > self.balance:  # business rule
-            raise InsufficientBalance("your balance does not cover your expenses.", amount - self.balance)
-        self.balance = self.balance - amount
+        if amount > self._balance:  # business rule
+            raise InsufficientBalance("your balance does not cover your expenses.", amount - self._balance)
+        self._balance = self._balance - amount
 
-    def get_balance(self):
-        return self.balance
 
     def deposit(self, amount):
         print("Account::deposit")
         if amount <= 0:  # validation
             raise ValueError("amount must be positive.")
-        self.balance = self.balance + amount
+        self._balance = self._balance + amount
 
     def __str__(self):
-        return f"Account [ iban: {self.__iban}, balance: {self.balance}]"
+        return f"Account [ iban: {self.iban}, balance: {self.balance}]"
 
     def __repr__(self):
-        return repr(self.__iban)
+        return repr(self.iban)
 
 
 class CheckingAccount(Account):  # sub/derived class
@@ -91,7 +97,7 @@ class CheckingAccount(Account):  # sub/derived class
         if amount > (self.balance + self.overdraft_amount):  # business rule
             raise InsufficientBalance("your balance does not cover your expenses.",
                                       amount - self.balance - self.overdraft_amount)
-        self.balance = self.balance - amount
+        self._balance = self._balance - amount
 
     def __str__(self):  # overriding
         return f"CheckingAccount [ balance: {self.balance}]"

@@ -21,7 +21,7 @@ def account_cost(accounts):  # generic
 def get_total_balance(accounts):  # generic
     total = 0
     for acc in accounts:
-        total = total + acc.get_balance()  # polymorphic call
+        total = total + acc.balance  # polymorphic call
     return total
 
 
