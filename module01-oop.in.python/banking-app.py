@@ -35,10 +35,12 @@ customers = [Customer("1", "Jack Bauer", "jack@example.com"),
              Customer("2", "Kate Austen", "kate@example.com")]
 for customer in customers:
     print(customer)
-customers[0].add_account(Account("1", 1000))
-customers[0].add_account(CheckingAccount("2", 2000, 500))
-customers[1].add_account(Account("3", 4000))
-customers[1].add_account(CheckingAccount("4", 4000, 2500))
-print(customers[0].get_num_accounts())
+jack = customers[0]
+jack.add_account(Account("1", 1000))
+jack.add_account(CheckingAccount("2", 2000, 500))
+kate = customers[1]
+kate.add_account(Account("3", 4000))
+kate.add_account(CheckingAccount("4", 4000, 2500))
+print(jack.get_num_accounts())
 for customer in customers:
     print(f"{customer.fullname}: {customer.get_total_balance()}")
