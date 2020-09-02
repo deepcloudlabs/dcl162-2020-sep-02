@@ -1,17 +1,22 @@
 from enum import Enum
 
-
 class InsufficientBalance(Exception):
     def __init__(self, message, deficit):
         self.message = message
         self.deficit = deficit
 
+# Value Class has no identity
+class Address:
+    def __init__(self,line1, line2, city, country):
+        self.line1 = line1
 
+# Entity Class
 class Customer:
-    def __init__(self, identity, fullname, email):
+    def __init__(self, identity, fullname, email,address):
         self._identity = identity
         self._fullname = fullname
         self._email = email
+        self._address = address
         self.accounts = {}
 
     @property
@@ -32,7 +37,7 @@ class Customer:
             total = total + account.balance
         return total
 
-    def add_account(self, iban, balance):
+    def new_account(self, iban, balance):
         if iban in self.accounts:
             raise ValueError("Iban already exists.")
         acc = Account(iban, balance)
@@ -71,9 +76,9 @@ class Customer:
 
 
 class AccountStatus(Enum):
-    CLOSED = 1
-    ACTIVE = 2
-    BLOCKED = 3
+    CLOSED = 100
+    ACTIVE = 200
+    BLOCKED = 350
 
 
 class Account:  # super/base class
@@ -126,6 +131,7 @@ class CheckingAccount(Account):  # sub/derived class
 
     def withdraw(self, amount):  # overriding
         print("CheckingAccount::withdraw")
+        # if isinstance(amount, float)
         if amount <= 0:  # validation
             raise ValueError("amount must be positive.")
         if amount > (self.balance + self.overdraft_amount):  # business rule

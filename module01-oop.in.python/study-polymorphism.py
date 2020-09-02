@@ -1,4 +1,4 @@
-from banking.domain import Account, CheckingAccount
+from banking.domain import Account, CheckingAccount, Customer
 
 # heterogeneous list
 accounts = []
@@ -25,4 +25,22 @@ def get_total_balance(accounts):  # generic
     return total
 
 
-print(f"Total Balance: {get_total_balance(accounts)}.")
+def get_customers_total_balance(customers):  # generic
+    total = 0
+    for customer in customers:
+        for account in customer.get_all_accounts():
+            total = total + account.balance  # polymorphic call
+    return total
+
+customers = [Customer("1", "Jack Bauer", "jack@example.com",None),
+             Customer("2", "Kate Austen", "kate@example.com",None)]
+for customer in customers:
+    print(customer)
+jack = customers[0]
+jack.add_account(Account("1", 1000))
+jack.add_account(CheckingAccount("2", 2000, 500))
+kate = customers[1]
+kate.add_account(Account("3", 4000))
+kate.add_account(CheckingAccount("4", 4000, 2500))
+
+print(f"Total Customer Balance: {get_customers_total_balance(customers)}.")
