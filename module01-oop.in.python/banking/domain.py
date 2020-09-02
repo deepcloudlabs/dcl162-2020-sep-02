@@ -1,3 +1,6 @@
+from enum import Enum
+
+
 class InsufficientBalance(Exception):
     def __init__(self, message, deficit):
         self.message = message
@@ -49,11 +52,25 @@ class Customer:
         return repr(self.identity)
 
 
+class AccountStatus(Enum):
+    CLOSED = 1
+    ACTIVE = 2
+    BLOCKED = 3
+
+
 class Account:  # super/base class
     def __init__(self, iban, balance):  # constructor
         self._iban = iban  # attribute information hiding!
         self._balance = balance  # balance should be positive!
-        self.status = None
+        self._status = AccountStatus.ACTIVE
+
+    @property
+    def status(self):
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        self._status = status
 
     @property
     def iban(self):
@@ -78,7 +95,7 @@ class Account:  # super/base class
         self._balance = self._balance + amount
 
     def __str__(self):
-        return f"Account [ iban: {self.iban}, balance: {self.balance}]"
+        return f"Account [ iban: {self.iban}, balance: {self.balance}, status: {self.status}]"
 
     def __repr__(self):
         return repr(self.iban)
@@ -99,4 +116,4 @@ class CheckingAccount(Account):  # sub/derived class
         self._balance = self._balance - amount
 
     def __str__(self):  # overriding
-        return f"CheckingAccount [ balance: {self.balance}]"
+        return f"CheckingAccount [ iban: {self.iban}, balance: {self.balance}, status: {self.status}, overdraftAmount: {self.overdraft_amount}]"
