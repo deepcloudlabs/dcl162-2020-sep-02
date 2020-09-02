@@ -71,7 +71,6 @@ class Account:  # super/base class
             raise InsufficientBalance("your balance does not cover your expenses.", amount - self._balance)
         self._balance = self._balance - amount
 
-
     def deposit(self, amount):
         print("Account::deposit")
         if amount <= 0:  # validation
@@ -101,29 +100,3 @@ class CheckingAccount(Account):  # sub/derived class
 
     def __str__(self):  # overriding
         return f"CheckingAccount [ balance: {self.balance}]"
-
-
-class Stock:
-    def __init__(self, symbol, price):
-        self._symbol = symbol
-        self._price = price
-
-    def __repr__(self):
-        return repr(self._symbol)
-
-    @property  # read-only property
-    def symbol(self):
-        return self._symbol
-
-    @property  # read-write property
-    def price(self):
-        return self._price
-
-    @price.setter
-    def price(self, price):
-        if price <= 0:
-            raise ValueError("Stock price must be positive.")
-        self._price = price
-
-    def __str__(self):
-        return f"Stock ({self._symbol}, {self._price})"

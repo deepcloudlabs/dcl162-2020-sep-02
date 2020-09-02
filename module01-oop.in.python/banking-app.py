@@ -1,6 +1,8 @@
-from banking.domain import Account, InsufficientBalance, Stock, CheckingAccount
+from banking.domain import Account, InsufficientBalance, CheckingAccount
+from banking.stockmarket import Stock
 
 # Ctrl+Alt+L : formatLa
+
 try:
     acc1 = Account("tr1", 1000) # __init__(self, iban, balance) ==> Account(acc1,"tr1", 1000)
     print(str(acc1))
