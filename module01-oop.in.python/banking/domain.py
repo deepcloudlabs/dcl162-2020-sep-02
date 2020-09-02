@@ -9,10 +9,28 @@ class InsufficientBalance(Exception):
 
 class Customer:
     def __init__(self, identity, fullname, email):
-        self.identity = identity
-        self.fullname = fullname
-        self.email = email
+        self._identity = identity
+        self._fullname = fullname
+        self._email = email
         self.accounts = {}
+
+    @property
+    def identity(self):
+        return self._identity
+
+    @property
+    def fullname(self):
+        return self._fullname
+
+    @property
+    def email(self):
+        return self._email
+
+    def get_total_balance(self):
+        total = 0
+        for iban, account in self.accounts.items():
+            total = total + account.balance
+        return total
 
     def add_account(self, iban, balance):
         if iban in self.accounts:
@@ -22,9 +40,9 @@ class Customer:
         return acc
 
     def add_account(self, account):
-        if account.get_iban() in self.accounts:
+        if account.iban in self.accounts:
             raise ValueError("Iban already exists.")
-        self.accounts[account.get_iban()] = account
+        self.accounts[account.iban] = account
 
     def get_account(self, iban):
         return self.accounts[iban]
@@ -37,7 +55,7 @@ class Customer:
         return acc
 
     def get_num_accounts(self):
-        len(self.accounts)
+        return len(self.accounts)
 
     def get_all_accounts(self):
         return self.accounts.values()
@@ -46,7 +64,7 @@ class Customer:
         return self.accounts.keys()
 
     def __str__(self):
-        pass
+        return f"Customer [identity: {self.identity}, fullname: {self.fullname}, email: {self.email}]"
 
     def __repr__(self):
         return repr(self.identity)
