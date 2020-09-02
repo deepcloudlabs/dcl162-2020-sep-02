@@ -7,12 +7,14 @@ def sequence(n):
         else:
             n = 3 * n + 1
 
+
 def squared(numbers):
-    for num in numbers:
-        print(f"squared: {num}")
-        yield num*num
+    for number in numbers:
+        print(f"squared: {number}")
+        yield number * number
+
 
 total = 0
-for num in squared(sequence(7)): # pipeline
+for num in squared(sequence(7)):  # pipeline
     total = total + num
     print(f"total: {total}")

@@ -33,14 +33,14 @@ countries = [
     {"code": "ita", "name": "italy", "continent": "europe", "population": 60000000}
 ]
 european_countries = []
-for country in countries: # external loop
+for country in countries:  # external loop
     if country['continent'] == 'europe':
         european_countries.append(country)
-european_countries = sorted(european_countries, key=lambda country: country['population'], reverse=True)
+european_countries = sorted(european_countries, key=lambda ctry: ctry['population'], reverse=True)
 print(european_countries)
 
 # filter-map-reduce
-european = lambda country: country['continent'] == 'europe'
-country_name6 = lambda country: len(country['name']) == 6
-order_by_population = lambda country: country['population']
-print(sorted(list(filter(country_name6, countries)), key=order_by_population, reverse=True)) # one liner, internal loop
+european = lambda ctry: ctry['continent'] == 'europe'
+country_name6 = lambda ctry: len(ctry['name']) == 6
+order_by_population = lambda ctry: ctry['population']
+print(sorted(list(filter(country_name6, countries)), key=order_by_population, reverse=True))  # one liner, internal loop

@@ -6,9 +6,9 @@ for num in numbers:
         result = True
         break
 print(result)
-is_even = lambda n : n % 2 == 0
-is_odd = lambda n : n % 2 == 1
-is_there_any_even_number = any(map(is_even, numbers))
+is_even = lambda n: n % 2 == 0
+is_odd = lambda n: n % 2 == 1
+is_there_any_even_number: bool = any(map(is_even, numbers))
 print(is_there_any_even_number)
 is_there_any_odd_number = any(map(is_odd, numbers))
 print(is_there_any_odd_number)
