@@ -2,59 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eaf275d4-b854-468f-95e3-6c33ad1dd58e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/hr-frontend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/drag-and-drop.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/toastr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/hr-config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/hr-util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/translation-en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/translation-tr.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/mod10-writing.api.with.flask.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/hr-api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/utility/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mod10-writing.api.with.flask/utility/rest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module07.mysql.with.python/.idea/module07.mysql.with.python.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module08-mongodb.with.pymongo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module08-mongodb.with.pymongo/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module08-mongodb.with.pymongo/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module08-mongodb.with.pymongo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module08-mongodb.with.pymongo/.idea/module08-mongodb.with.pymongo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module08-mongodb.with.pymongo/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module08-mongodb.with.pymongo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/tests/test_account.py" beforeDir="false" afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/tests/test_account.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../workspace-dcl164-2020-sep2-day2.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mod10-writing.api.with.flask/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module03.unit.testing.in.pyton/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,17 +60,39 @@
       <updated>1561530922627</updated>
       <workItem from="1561530923778" duration="14858000" />
       <workItem from="1571907026184" duration="4786000" />
-      <workItem from="1599141914602" duration="7537000" />
+      <workItem from="1599141914602" duration="8273000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1599155115338</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599155115338</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="585" y="106" key="CommitChangelistDialog2" timestamp="1599155113710">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="106" key="CommitChangelistDialog2/0.0.1920.1040/8.-1080.1920.1040@0.0.1920.1040" timestamp="1599155113710" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1599148490077">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/8.-1080.1920.1040@0.0.1920.1040" timestamp="1599148490077" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1599155117851">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/8.-1080.1920.1040@0.0.1920.1040" timestamp="1599155117851" />
   </component>
 </project>
