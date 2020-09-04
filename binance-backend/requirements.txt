@@ -1,0 +1,6 @@
+eventlet
+flask-cors
+flask-socketio
+Flask~=1.1.2
+pymongo~=3.11.0
+websockets~=8.1
