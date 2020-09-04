@@ -11,6 +11,7 @@ async def consumer_handler(frames):
         trades.append({"symbol": trade['s'], "price": float(trade['p']), "quantity": float(trade['q'])})
         print(trades)
 
+
 async def connect():
     async with websockets.connect("wss://stream.binance.com:9443/ws/btcusdt@trade") as ws:
         await consumer_handler(ws)
